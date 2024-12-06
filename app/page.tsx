@@ -1,3 +1,5 @@
-export default function App() {
-	return;
+import App from "@/components/page/App";
+
+export default function Page() {
+	return <App />;
 }
