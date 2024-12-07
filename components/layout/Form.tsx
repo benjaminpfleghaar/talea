@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import styled from "styled-components";
 import Input from "@/components/ui/Input";
 import Select from "@/components/ui/Select";
@@ -11,6 +12,17 @@ const symptoms = ["Schwierigkeiten still zu sitzen", "Gefühl innerer Unruhe", "
 const characters = ["Drachen & Ritter", "Astronauten & Weltall", "Tiere & Wald"];
 
 export default function Form() {
+	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
+
+	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
+		setSelectedSymptoms([...selectedSymptoms, event.target.value]);
+		event.target.selectedIndex = 0;
+	}
+
+	function handleClick(value: string) {
+		setSelectedSymptoms(selectedSymptoms.filter((symptom) => symptom !== value));
+	}
+
 	return (
 		<StyledAside>
 			<StyledWrapper>
@@ -28,9 +40,12 @@ export default function Form() {
 						</Select>
 						<Input label="Alter" placeholder="0" />
 					</StyledRow>
-					<MultiSelect label="Symptome">
+					<MultiSelect label="Symptome" selectedSymptoms={selectedSymptoms} onChange={handleChange} onClick={handleClick}>
+						<option value="" disabled>
+							{selectedSymptoms.length === 0 ? "Wähle zutreffende Symptome aus" : selectedSymptoms.join(", ")}
+						</option>
 						{symptoms.map((symptom) => (
-							<option key={symptom} value={symptom}>
+							<option key={symptom} value={symptom} disabled={selectedSymptoms.includes(symptom)}>
 								{symptom}
 							</option>
 						))}

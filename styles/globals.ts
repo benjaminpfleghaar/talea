@@ -43,6 +43,7 @@ const GlobalStyles = createGlobalStyle`
 		--spacing-16: 1rem;
 		--spacing-24: 1.5rem;
 		--spacing-48: 3rem;
+		--spacing-64: 4rem;
 		--spacing-96: 6rem;
     }
 	body {
