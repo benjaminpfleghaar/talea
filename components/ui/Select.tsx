@@ -4,16 +4,16 @@ import styled from "styled-components";
 
 export default function Select({ label, children }: { label: string; children: React.ReactNode }) {
 	return (
-		<StyledDiv>
+		<StyledWrapper>
 			<StyledLabel htmlFor={label}>{label}</StyledLabel>
 			<StyledSelect id={label} name={label}>
 				{children}
 			</StyledSelect>
-		</StyledDiv>
+		</StyledWrapper>
 	);
 }
 
-const StyledDiv = styled.div`
+const StyledWrapper = styled.div`
 	display: flex;
 	gap: var(--spacing-8);
 	flex-direction: column;

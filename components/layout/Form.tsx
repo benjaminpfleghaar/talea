@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Input from "@/components/ui/Input";
 import Select from "@/components/ui/Select";
 import Button from "@/components/ui/Button";
+import MultiSelect from "@/components/ui/MultiSelect";
 
 const genders = ["Männlich", "Weiblich", "Divers"];
 const symptoms = ["Schwierigkeiten still zu sitzen", "Gefühl innerer Unruhe", "Bewegungsdrang", "Viel reden", "Flüchtigkeitsfehler", "Vergesslichkeit", "Erhöhte Ablenkbarkeit", "Aufschieben ungeliebter Tätigkeiten", "Wenig Geduld", "Schnelle Frustration", "Starke und plötzliche Emotionen", "Unterbrechen/Stören anderer"];
@@ -17,7 +18,7 @@ export default function Form() {
 				<StyledParagraph>Hilf deinen Patienten durch eine personalisierte Geschichte dabei ihre ADHS Symptomatik besser zu verstehen und zu lernen damit umzugehen.</StyledParagraph>
 				<StyledForm>
 					<Input label="Name" placeholder="Vorname des Patienten" />
-					<StyledDiv>
+					<StyledRow>
 						<Select label="Geschlecht">
 							{genders.map((gender) => (
 								<option key={gender} value={gender}>
@@ -26,14 +27,14 @@ export default function Form() {
 							))}
 						</Select>
 						<Input label="Alter" placeholder="0" />
-					</StyledDiv>
-					<Select label="Symptome">
+					</StyledRow>
+					<MultiSelect label="Symptome">
 						{symptoms.map((symptom) => (
 							<option key={symptom} value={symptom}>
 								{symptom}
 							</option>
 						))}
-					</Select>
+					</MultiSelect>
 					<Select label="Thema">
 						{characters.map((character) => (
 							<option key={character} value={character}>
@@ -68,7 +69,7 @@ const StyledParagraph = styled.p`
 const StyledForm = styled.form`
 	display: contents;
 `;
-const StyledDiv = styled.div`
+const StyledRow = styled.div`
 	display: grid;
 	column-gap: var(--spacing-16);
 	grid-template-columns: 214px 99px;

@@ -9,7 +9,7 @@ export default function Book() {
 			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" />
 			<StyledCaption>Drachen & Ritter</StyledCaption>
 			<StyledHeadline>Die Geschichte von Lila, dem kleinen Drachen mit dem Wirbelwind im Bauch</StyledHeadline>
-			<StyledDiv>
+			<StyledWrapper>
 				<StyledParagraph>
 					Es war einmal ein kleiner Drache namens Lila. Sie lebte in einer bunten Drachenhöhle hoch oben in den Wolken. Lila war nicht wie die anderen Drachen. Während ihre Geschwister stundenlang ruhig auf ihren Schatzhaufen lagen oder an komplizierten Flugfiguren arbeiteten, hatte Lila immer etwas anderes vor. In ihrem Bauch wirbelte ein kleiner unsichtbarer Sturm, den sie „den
 					Wirbelwind“ nannte.
@@ -34,7 +34,7 @@ export default function Book() {
 				<StyledParagraph>Lila probierte es aus. Sie nahm einen tiefen Atemzug, zählte bis drei und suchte den ersten Baum. Es funktionierte! Und mit jedem kleinen Schritt wurde der Wirbelwind ein bisschen ruhiger. Schließlich fand sie das Schwert – und die Drachenritter jubelten.</StyledParagraph>
 				<StyledParagraph>Von diesem Tag an wusste Lila, dass ihr Wirbelwind kein Feind war, sondern ein Freund, der sie besonders machte. Sie musste nur manchmal mit ihm reden, ihn lenken und Pausen machen. Und obwohl es nicht immer perfekt klappte, wusste sie: „Ich bin ein kleiner Drache mit einem großen Wirbelwind – und das ist gut so.“</StyledParagraph>
 				<StyledParagraph>Ende</StyledParagraph>
-			</StyledDiv>
+			</StyledWrapper>
 		</StyledArticle>
 	);
 }
@@ -62,7 +62,7 @@ const StyledHeadline = styled.h2`
 	font: var(--font-serif-bold-24);
 	margin-bottom: var(--spacing-24);
 `;
-const StyledDiv = styled.div`
+const StyledWrapper = styled.div`
 	width: 518px;
 	display: flex;
 	margin-inline: auto;
