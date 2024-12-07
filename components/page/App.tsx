@@ -14,8 +14,9 @@ export default function App() {
 }
 
 const StyledMain = styled.main`
-	display: flex;
+	display: grid;
+	width: 1084px;
 	margin-inline: auto;
-	gap: var(--spacing-48);
-	width: min(1344px, 100% - 6rem);
+	column-gap: var(--spacing-48);
+	grid-template-columns: 329px 707px;
 `;

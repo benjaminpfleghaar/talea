@@ -1,16 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import styled from "styled-components";
 
 export default function Book() {
 	return (
 		<StyledArticle>
-			<StyledTitle>Der kleine Fuchs</StyledTitle>
-			<StyledHeadline>
-				Die Geschichte von Lila,
-				<br />
-				dem kleinen Drachen mit dem Wirbelwind im Bauch
-			</StyledHeadline>
+			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" />
+			<StyledCaption>Drachen & Ritter</StyledCaption>
+			<StyledHeadline>Die Geschichte von Lila, dem kleinen Drachen mit dem Wirbelwind im Bauch</StyledHeadline>
 			<StyledDiv>
 				<StyledParagraph>
 					Es war einmal ein kleiner Drache namens Lila. Sie lebte in einer bunten Drachenhöhle hoch oben in den Wolken. Lila war nicht wie die anderen Drachen. Während ihre Geschwister stundenlang ruhig auf ihren Schatzhaufen lagen oder an komplizierten Flugfiguren arbeiteten, hatte Lila immer etwas anderes vor. In ihrem Bauch wirbelte ein kleiner unsichtbarer Sturm, den sie „den
@@ -42,36 +40,37 @@ export default function Book() {
 }
 
 const StyledArticle = styled.article`
-	flex: 1;
+	overflow: hidden;
 	margin: var(--spacing-48) 0;
 	border-radius: var(--spacing-16);
 	background-color: var(--color-gray-0);
-	padding: var(--spacing-96) var(--spacing-120);
 `;
-const StyledTitle = styled.p`
-	color: var(--color-gray-60);
-	margin-bottom: var(--spacing-16);
-	font: var(--font-sans-medium-14);
-`;
-const StyledHeadline = styled.h2`
-	color: var(--color-gray-100);
-	font: var(--font-serif-bold-40);
+const StyledImage = styled(Image)`
 	margin-bottom: var(--spacing-48);
 `;
+const StyledCaption = styled.p`
+	width: 518px;
+	margin-inline: auto;
+	color: var(--color-gray-60);
+	margin-bottom: var(--spacing-8);
+	font: var(--font-sans-medium-12);
+`;
+const StyledHeadline = styled.h2`
+	width: 518px;
+	margin-inline: auto;
+	color: var(--color-gray-100);
+	font: var(--font-serif-bold-24);
+	margin-bottom: var(--spacing-24);
+`;
 const StyledDiv = styled.div`
+	width: 518px;
 	display: flex;
+	margin-inline: auto;
 	gap: var(--spacing-24);
 	flex-direction: column;
+	margin-bottom: var(--spacing-96);
 `;
 const StyledParagraph = styled.p`
 	color: var(--color-gray-100);
-	font: var(--font-serif-regular-20);
-
-	&:first-child {
-		&::first-letter {
-			initial-letter: 2;
-			margin-right: var(--spacing-16);
-			font: var(--font-serif-regular-60);
-		}
-	}
+	font: var(--font-serif-regular-16);
 `;
