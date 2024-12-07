@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
         --font-sans-medium-16: 500 1rem/1rem var(--font-sans);
 
         --font-serif-regular-16: 400 1rem/1.5rem var(--font-serif);
-        --font-serif-bold-24: 700 1.5rem/2rem var(--font-serif);
+        --font-serif-bold-24: 700 2rem/2.5rem var(--font-serif);
 
         --color-gray-100: #161616;
 		--color-gray-60: #6F6F6F;

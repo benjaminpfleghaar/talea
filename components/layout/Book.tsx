@@ -8,7 +8,11 @@ export default function Book() {
 		<StyledArticle>
 			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" />
 			<StyledCaption>Drachen & Ritter</StyledCaption>
-			<StyledHeadline>Die Geschichte von Lila, dem kleinen Drachen mit dem Wirbelwind im Bauch</StyledHeadline>
+			<StyledHeadline>
+				Die Geschichte von Lila,
+				<br />
+				dem kleinen Drachen mit dem Wirbelwind im Bauch
+			</StyledHeadline>
 			<StyledWrapper>
 				<StyledParagraph>
 					Es war einmal ein kleiner Drache namens Lila. Sie lebte in einer bunten Drachenhöhle hoch oben in den Wolken. Lila war nicht wie die anderen Drachen. Während ihre Geschwister stundenlang ruhig auf ihren Schatzhaufen lagen oder an komplizierten Flugfiguren arbeiteten, hatte Lila immer etwas anderes vor. In ihrem Bauch wirbelte ein kleiner unsichtbarer Sturm, den sie „den
@@ -50,6 +54,7 @@ const StyledImage = styled(Image)`
 `;
 const StyledCaption = styled.p`
 	width: 518px;
+	text-align: center;
 	margin-inline: auto;
 	color: var(--color-gray-60);
 	margin-bottom: var(--spacing-8);
@@ -57,10 +62,11 @@ const StyledCaption = styled.p`
 `;
 const StyledHeadline = styled.h2`
 	width: 518px;
+	text-align: center;
 	margin-inline: auto;
 	color: var(--color-gray-100);
 	font: var(--font-serif-bold-24);
-	margin-bottom: var(--spacing-24);
+	margin-bottom: var(--spacing-48);
 `;
 const StyledWrapper = styled.div`
 	width: 518px;
