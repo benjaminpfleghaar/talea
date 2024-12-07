@@ -6,7 +6,7 @@ import styled from "styled-components";
 export default function Book() {
 	return (
 		<StyledArticle>
-			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" />
+			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" priority />
 			<StyledCaption>Drachen & Ritter</StyledCaption>
 			<StyledHeadline>
 				Die Geschichte von Lila,

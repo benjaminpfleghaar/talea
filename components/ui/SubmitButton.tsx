@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { useFormStatus } from "react-dom";
 
 export default function SubmitButton({ label }: { label: string }) {
-	return <StyledButton type="submit">{label}</StyledButton>;
+	const { pending } = useFormStatus();
+
+	return <StyledButton type="submit">{pending ? "Laden..." : label}</StyledButton>;
 }
 
 const StyledButton = styled.button`

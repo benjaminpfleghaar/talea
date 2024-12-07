@@ -1,17 +1,19 @@
 "use client";
 
-import { useState } from "react";
 import styled from "styled-components";
 import Input from "@/components/ui/Input";
 import Select from "@/components/ui/Select";
-import Button from "@/components/ui/Button";
+import { handleSubmit } from "@/utils/actions";
+import { useState, useActionState } from "react";
 import MultiSelect from "@/components/ui/MultiSelect";
+import SubmitButton from "@/components/ui/SubmitButton";
 
 const genders = ["Männlich", "Weiblich", "Divers"];
 const symptoms = ["Schwierigkeiten still zu sitzen", "Gefühl innerer Unruhe", "Bewegungsdrang", "Viel reden", "Flüchtigkeitsfehler", "Vergesslichkeit", "Erhöhte Ablenkbarkeit", "Aufschieben ungeliebter Tätigkeiten", "Wenig Geduld", "Schnelle Frustration", "Starke und plötzliche Emotionen", "Unterbrechen/Stören anderer"];
 const characters = ["Drachen & Ritter", "Astronauten & Weltall", "Tiere & Wald"];
 
 export default function Form() {
+	const [formState, formAction] = useActionState(handleSubmit, {});
 	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
 
 	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -26,9 +28,9 @@ export default function Form() {
 	return (
 		<StyledAside>
 			<StyledWrapper>
-				<StyledHeadline>Talea</StyledHeadline>
+				<StyledHeadline>Talea {JSON.stringify(formState)}</StyledHeadline>
 				<StyledParagraph>Hilf deinen Patienten durch eine personalisierte Geschichte dabei ihre ADHS Symptomatik besser zu verstehen und zu lernen damit umzugehen.</StyledParagraph>
-				<StyledForm>
+				<StyledForm action={formAction}>
 					<Input label="Name" placeholder="Vorname des Patienten" />
 					<StyledRow>
 						<Select label="Geschlecht">
@@ -57,7 +59,7 @@ export default function Form() {
 							</option>
 						))}
 					</Select>
-					<Button label="Geschichte erstellen" />
+					<SubmitButton label="Geschichte erstellen" />
 				</StyledForm>
 			</StyledWrapper>
 		</StyledAside>
