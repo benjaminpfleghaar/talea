@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
         --font-serif-bold-24: 700 2rem/2.5rem var(--font-serif);
 
         --color-gray-100: #161616;
+		--color-gray-70: #525252;
 		--color-gray-60: #6F6F6F;
 		--color-gray-50: #8D8D8D;
 		--color-gray-20: #E0E0E0;
@@ -40,8 +41,10 @@ const GlobalStyles = createGlobalStyle`
 		--color-gray-0: #FFFFFF;
 
 		--spacing-8: 0.5rem;
+		--spacing-12: 0.75rem;
 		--spacing-16: 1rem;
 		--spacing-24: 1.5rem;
+		--spacing-32: 2rem;
 		--spacing-48: 3rem;
 		--spacing-64: 4rem;
 		--spacing-96: 6rem;

@@ -42,7 +42,7 @@ export default function Form() {
 					</StyledRow>
 					<MultiSelect label="Symptome" selectedSymptoms={selectedSymptoms} onChange={handleChange} onClick={handleClick}>
 						<option value="" disabled>
-							{selectedSymptoms.length === 0 ? "Wähle zutreffende Symptome aus" : selectedSymptoms.join(", ")}
+							Wähle zutreffende Symptome aus
 						</option>
 						{symptoms.map((symptom) => (
 							<option key={symptom} value={symptom} disabled={selectedSymptoms.includes(symptom)}>
