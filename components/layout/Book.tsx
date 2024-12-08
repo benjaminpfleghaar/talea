@@ -50,7 +50,9 @@ const StyledArticle = styled.article`
 	background-color: var(--color-gray-0);
 `;
 const StyledImage = styled(Image)`
+	border-radius: var(--spacing-16);
 	margin-bottom: var(--spacing-48);
+	border: var(--spacing-8) solid var(--color-gray-0);
 `;
 const StyledCaption = styled.p`
 	width: 518px;
