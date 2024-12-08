@@ -44,7 +44,6 @@ export default function Book() {
 }
 
 const StyledArticle = styled.article`
-	overflow: hidden;
 	margin: var(--spacing-48) 0;
 	border-radius: var(--spacing-16);
 	background-color: var(--color-gray-0);

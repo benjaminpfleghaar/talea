@@ -4,7 +4,11 @@ import { useFormStatus } from "react-dom";
 export default function SubmitButton({ label }: { label: string }) {
 	const { pending } = useFormStatus();
 
-	return <StyledButton type="submit">{pending ? "Laden..." : label}</StyledButton>;
+	return (
+		<StyledButton type="submit" disabled={pending}>
+			{pending ? "Laden..." : label}
+		</StyledButton>
+	);
 }
 
 const StyledButton = styled.button`
@@ -17,4 +21,10 @@ const StyledButton = styled.button`
 	border-radius: var(--spacing-8);
 	font: var(--font-sans-medium-14);
 	background-color: var(--color-gray-100);
+
+	&:disabled {
+		cursor: default;
+		color: var(--color-gray-10);
+		background-color: var(--color-gray-60);
+	}
 `;

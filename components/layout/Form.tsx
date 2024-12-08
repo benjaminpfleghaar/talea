@@ -12,8 +12,12 @@ const genders = ["Männlich", "Weiblich", "Divers"];
 const symptoms = ["Schwierigkeiten still zu sitzen", "Gefühl innerer Unruhe", "Bewegungsdrang", "Viel reden", "Flüchtigkeitsfehler", "Vergesslichkeit", "Erhöhte Ablenkbarkeit", "Aufschieben ungeliebter Tätigkeiten", "Wenig Geduld", "Schnelle Frustration", "Starke und plötzliche Emotionen", "Unterbrechen/Stören anderer"];
 const characters = ["Drachen & Ritter", "Astronauten & Weltall", "Tiere & Wald"];
 
+const initialState = {
+	message: null,
+};
+
 export default function Form() {
-	const [formState, formAction] = useActionState(handleSubmit, {});
+	const [formState, formAction] = useActionState(handleSubmit, initialState);
 	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
 
 	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -52,6 +56,7 @@ export default function Form() {
 							</option>
 						))}
 					</MultiSelect>
+					{selectedSymptoms.length !== 0 && <input type="hidden" name="Symptome" value={selectedSymptoms.join(", ")} />}
 					<Select label="Thema">
 						{characters.map((character) => (
 							<option key={character} value={character}>
