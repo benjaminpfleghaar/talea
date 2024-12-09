@@ -7,7 +7,7 @@ import { TaleProps } from "@/types/TaleProps";
 export default function Tale({ theme, title, story, isPending = false }: TaleProps) {
 	return (
 		<StyledArticle $isPending={isPending}>
-			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" priority />
+			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Childish watercolor of a dragon and a child in the forest talking to each other" priority />
 			<StyledCaption>{theme}</StyledCaption>
 			<StyledHeadline>{title}</StyledHeadline>
 			<StyledWrapper>
