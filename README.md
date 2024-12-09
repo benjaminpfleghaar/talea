@@ -1,6 +1,6 @@
 # Talea
 
-This app project is the result of a five-day hackathon focused on 'Learning'. The goal was to develop an idea and build a working prototype, with no restrictions on the choice of technology or platform.
+This app project is the result of a five-day hackathon on the topic of "learning". The aim was to develop an idea and build a working prototype, with no restrictions on the choice of technology or platform.
 
 ## Table of Contents
 
