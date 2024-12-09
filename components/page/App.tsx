@@ -13,7 +13,7 @@ export default function App() {
 	return (
 		<StyledMain>
 			<Form onSubmit={formAction} isPending={isPending} />
-			<Tale {...taleState} />
+			<Tale {...taleState} isPending={isPending} />
 		</StyledMain>
 	);
 }
