@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Talea
 
-## Getting Started
+This app project is the result of a five-day hackathon focused on 'Learning'. The goal was to develop an idea and build a working prototype, with no restrictions on the choice of technology or platform.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Description](#description)
+2. [Design](#design)
+3. [Backlog](#backlog)
+4. [How to use](#how-to-use)
+5. [Dependencies](#dependencies)
+6. [Tech Stack](#tech-stack)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ADHD is a complex neurological condition, making it difficult to explain — especially to children. Talea bridges the gap by generating personalized stories. Through these stories, patients can identify with the main character, gaining a deeper understanding of themselves, their symptoms, and ADHD as a whole.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design
 
-## Learn More
+![Mockup](./assets/mockup.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+## Backlog
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Provide more themes
+-   Generate images dynamically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to use
 
-## Deploy on Vercel
+The application uses _Next.js_ as it's foundation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   Clone the whole repository
+-   Run `npm install` in the app directory to install dependencies
+-   Run `npm run dev` to start the application
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Dependencies
+
+-   next
+-   react-dom
+-   styled-components
+-   opaenai
+-   react
+
+## Tech Stack
+
+-   VSC
+-   GitHub
+-   Next.js
+-   TypeScript
+-   React
+-   HTML
+-   CSS
