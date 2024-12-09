@@ -2,14 +2,9 @@
 
 import Image from "next/image";
 import styled from "styled-components";
+import { TaleProps } from "@/types/TaleProps";
 
-interface BookProps {
-	theme: string;
-	title: string;
-	story: string[];
-}
-
-export default function Book({ theme, title, story }: BookProps) {
+export default function Tale({ theme, title, story }: TaleProps) {
 	return (
 		<StyledArticle>
 			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Der kleine Drache" priority />

@@ -4,7 +4,7 @@ import { tale } from "@/data/data";
 import { useActionState } from "react";
 import styled from "styled-components";
 import Form from "@/components/layout/Form";
-import Book from "@/components/layout/Book";
+import Tale from "@/components/layout/Tale";
 import { handleSubmit } from "@/utils/actions";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
 	return (
 		<StyledMain>
 			<Form onSubmit={formAction} isPending={isPending} />
-			<Book {...taleState} />
+			<Tale {...taleState} />
 		</StyledMain>
 	);
 }

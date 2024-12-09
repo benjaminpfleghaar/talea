@@ -8,7 +8,7 @@ import MultiSelect from "@/components/ui/MultiSelect";
 import SubmitButton from "@/components/ui/SubmitButton";
 import { genders, symptoms, themes } from "@/data/data";
 
-export default function Form({ onSubmit, isPending }: { onSubmit: () => void; isPending: boolean }) {
+export default function Form({ onSubmit, isPending }: { onSubmit: (payload: FormData) => void; isPending: boolean }) {
 	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
 
 	useEffect(() => {
