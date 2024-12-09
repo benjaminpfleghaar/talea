@@ -77,7 +77,9 @@ const StyledWrapper = styled.div`
 	top: var(--spacing-48);
 `;
 const StyledHeadline = styled.h1`
+	padding-left: var(--spacing-24);
 	font: var(--font-sans-medium-16);
+	background: url("/images/logo.svg") center left / 16px 16px no-repeat;
 `;
 const StyledParagraph = styled.p`
 	color: var(--color-gray-60);
