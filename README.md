@@ -13,7 +13,7 @@ This app project is the result of a five-day hackathon focused on 'Learning'. Th
 
 ## Description
 
-ADHD is a complex neurological condition, making it difficult to explain — especially to children. Talea bridges the gap by generating personalized stories. Through these stories, patients can identify with the main character, gaining a deeper understanding of themselves, their symptoms, and ADHD as a whole.
+ADHD is a complex neurological condition, making it difficult to explain — especially to children. Talea bridges the gap by using AI to generate personalized stories. Through these stories, patients can identify with the main character, gaining a deeper understanding of themselves, their symptoms, and ADHD as a whole.
 
 ## Design
 
@@ -30,6 +30,7 @@ The application uses _Next.js_ as it's foundation.
 
 -   Clone the whole repository
 -   Run `npm install` in the app directory to install dependencies
+-   Create a `.env.local` file and add your OpenAI API key
 -   Run `npm run dev` to start the application
 
 ## Dependencies
