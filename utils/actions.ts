@@ -33,4 +33,6 @@ export async function handleSubmit(prevState: TaleProps, formData: FormData) {
 	});
 
 	if (completion.choices[0].message.content !== null) return JSON.parse(completion.choices[0].message.content);
+
+	return prevState;
 }
