@@ -1,6 +1,8 @@
 "use server";
 
-export async function handleSubmit(prevState: any, formData: FormData) {
+// export async function handleSubmit(prevState: any, formData: FormData) {
+
+export async function handleSubmit() {
 	// const rawFormData = {
 	// 	Name: formData.get("Name"),
 	// 	Geschlecht: formData.get("Geschlecht"),
@@ -17,5 +19,9 @@ export async function handleSubmit(prevState: any, formData: FormData) {
 		setTimeout(resolve, 2000);
 	});
 
-	return { message: "Success" };
+	return {
+		theme: "Astronauten & Weltall",
+		title: "Die Geschichte von Lorem ipsum",
+		story: ["Lorem ipsum dolor sit amet consetetur.", "Ende"],
+	};
 }

@@ -1,24 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Input from "@/components/ui/Input";
 import Select from "@/components/ui/Select";
-import { handleSubmit } from "@/utils/actions";
-import { useState, useActionState } from "react";
 import MultiSelect from "@/components/ui/MultiSelect";
 import SubmitButton from "@/components/ui/SubmitButton";
+import { genders, symptoms, themes } from "@/data/data";
 
-const genders = ["Männlich", "Weiblich", "Divers"];
-const symptoms = ["Schwierigkeiten still zu sitzen", "Gefühl innerer Unruhe", "Bewegungsdrang", "Viel reden", "Flüchtigkeitsfehler", "Vergesslichkeit", "Erhöhte Ablenkbarkeit", "Aufschieben ungeliebter Tätigkeiten", "Wenig Geduld", "Schnelle Frustration", "Starke und plötzliche Emotionen", "Unterbrechen/Stören anderer"];
-const characters = ["Drachen & Ritter", "Astronauten & Weltall", "Tiere & Wald"];
-
-const initialState = {
-	message: null,
-};
-
-export default function Form() {
-	const [formState, formAction] = useActionState(handleSubmit, initialState);
+export default function Form({ onSubmit, isPending }: { onSubmit: () => void; isPending: boolean }) {
 	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
+
+	useEffect(() => {
+		if (!isPending) setSelectedSymptoms([]);
+	}, [isPending]);
 
 	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
 		setSelectedSymptoms([...selectedSymptoms, event.target.value]);
@@ -32,9 +27,9 @@ export default function Form() {
 	return (
 		<StyledAside>
 			<StyledWrapper>
-				<StyledHeadline>Talea {JSON.stringify(formState)}</StyledHeadline>
+				<StyledHeadline>Talea</StyledHeadline>
 				<StyledParagraph>Hilf deinen Patienten durch eine personalisierte Geschichte dabei ihre ADHS Symptomatik besser zu verstehen und zu lernen damit umzugehen.</StyledParagraph>
-				<StyledForm action={formAction}>
+				<StyledForm action={onSubmit}>
 					<Input label="Name" placeholder="Vorname des Patienten" />
 					<StyledRow>
 						<Select label="Geschlecht">
@@ -58,9 +53,9 @@ export default function Form() {
 					</MultiSelect>
 					{selectedSymptoms.length !== 0 && <input type="hidden" name="Symptome" value={selectedSymptoms.join(", ")} />}
 					<Select label="Thema">
-						{characters.map((character) => (
-							<option key={character} value={character}>
-								{character}
+						{themes.map((theme) => (
+							<option key={theme} value={theme}>
+								{theme}
 							</option>
 						))}
 					</Select>

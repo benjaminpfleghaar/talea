@@ -1,14 +1,19 @@
 "use client";
 
+import { tale } from "@/data/data";
+import { useActionState } from "react";
 import styled from "styled-components";
 import Form from "@/components/layout/Form";
 import Book from "@/components/layout/Book";
+import { handleSubmit } from "@/utils/actions";
 
 export default function App() {
+	const [taleState, formAction, isPending] = useActionState(handleSubmit, tale);
+
 	return (
 		<StyledMain>
-			<Form />
-			<Book />
+			<Form onSubmit={formAction} isPending={isPending} />
+			<Book {...taleState} />
 		</StyledMain>
 	);
 }
