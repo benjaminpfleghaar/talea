@@ -4,10 +4,16 @@ import Image from "next/image";
 import styled from "styled-components";
 import { TaleProps } from "@/types/TaleProps";
 
+function setCover(theme: string) {
+	if (theme === "Drachen & Ritter") return "dragon";
+	if (theme === "Wale & Meerestiere") return "whale";
+	return "fairy";
+}
+
 export default function Tale({ theme, title, story, isPending = false }: TaleProps) {
 	return (
 		<StyledArticle $isPending={isPending}>
-			<StyledImage src="/images/der-kleine-drache.jpg" width={707} height={235} alt="Childish watercolor of a dragon and a child in the forest talking to each other" priority />
+			<StyledImage src={`/images/${setCover(theme)}.jpg`} width={707} height={235} alt="Childish watercolor of a dragon and a child in the forest talking to each other" priority />
 			<StyledCaption>{theme}</StyledCaption>
 			<StyledHeadline>{title}</StyledHeadline>
 			<StyledWrapper>
