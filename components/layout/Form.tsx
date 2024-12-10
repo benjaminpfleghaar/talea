@@ -11,9 +11,7 @@ export default function Form({ onSubmit, isPending }: { onSubmit: (payload: Form
 
 	// Reset state after form submission
 	useEffect(() => {
-		if (!isPending) {
-			setSelectedSymptoms([]);
-		}
+		if (!isPending) setSelectedSymptoms([]);
 	}, [isPending]);
 
 	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
