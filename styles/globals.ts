@@ -40,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
 		--color-gray-10: #F4F4F4;
 		--color-gray-0: #FFFFFF;
 
+		--spacing-4: 0.25rem;
 		--spacing-8: 0.5rem;
 		--spacing-12: 0.75rem;
 		--spacing-16: 1rem;

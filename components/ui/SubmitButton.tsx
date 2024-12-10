@@ -1,12 +1,20 @@
+import Image from "next/image";
 import styled from "styled-components";
 import { useFormStatus } from "react-dom";
 
 export default function SubmitButton({ label }: { label: string }) {
 	const { pending } = useFormStatus();
 
+	if (pending)
+		return (
+			<StyledButton type="submit" aria-label="Laden" disabled={true}>
+				<StyledLoader></StyledLoader>
+			</StyledButton>
+		);
+
 	return (
-		<StyledButton type="submit" aria-label={pending ? "Laden" : ""} disabled={pending}>
-			{pending ? <StyledLoader></StyledLoader> : label}
+		<StyledButton type="submit">
+			<Image src="/images/ai.svg" width={18} height={21} alt="" /> {label}
 		</StyledButton>
 	);
 }
@@ -15,17 +23,17 @@ const StyledButton = styled.button`
 	display: flex;
 	cursor: pointer;
 	align-items: center;
+	gap: var(--spacing-4);
 	justify-content: center;
 	height: var(--spacing-48);
 	color: var(--color-gray-0);
 	border-radius: var(--spacing-8);
 	font: var(--font-sans-medium-14);
+	transition: background-color 0.3s ease;
 	background-color: var(--color-gray-100);
-	transition: color 0.3s ease, background-color 0.3s ease;
 
 	&:disabled {
 		cursor: default;
-		color: var(--color-gray-10);
 		background-color: var(--color-gray-60);
 	}
 `;
