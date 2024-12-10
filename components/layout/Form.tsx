@@ -1,8 +1,6 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Input from "@/components/ui/Input";
+import { useEffect, useState } from "react";
 import Select from "@/components/ui/Select";
 import MultiSelect from "@/components/ui/MultiSelect";
 import SubmitButton from "@/components/ui/SubmitButton";
@@ -11,8 +9,11 @@ import { genders, symptoms, themes } from "@/data/data";
 export default function Form({ onSubmit, isPending }: { onSubmit: (payload: FormData) => void; isPending: boolean }) {
 	const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
 
+	// Reset state after form submission
 	useEffect(() => {
-		if (!isPending) setSelectedSymptoms([]);
+		if (!isPending) {
+			setSelectedSymptoms([]);
+		}
 	}, [isPending]);
 
 	function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -26,7 +27,7 @@ export default function Form({ onSubmit, isPending }: { onSubmit: (payload: Form
 
 	return (
 		<StyledAside>
-			<StyledWrapper>
+			<StyledStickyWrapper>
 				<StyledHeadline>Talea</StyledHeadline>
 				<StyledParagraph>Hilf deinen Patienten durch eine personalisierte Geschichte dabei ihre ADHS Symptomatik besser zu verstehen und zu lernen damit umzugehen.</StyledParagraph>
 				<StyledForm action={onSubmit}>
@@ -61,7 +62,7 @@ export default function Form({ onSubmit, isPending }: { onSubmit: (payload: Form
 					</Select>
 					<SubmitButton label="Geschichte erstellen" />
 				</StyledForm>
-			</StyledWrapper>
+			</StyledStickyWrapper>
 		</StyledAside>
 	);
 }
@@ -69,7 +70,7 @@ export default function Form({ onSubmit, isPending }: { onSubmit: (payload: Form
 const StyledAside = styled.aside`
 	padding: var(--spacing-48) 0;
 `;
-const StyledWrapper = styled.div`
+const StyledStickyWrapper = styled.div`
 	display: flex;
 	position: sticky;
 	gap: var(--spacing-24);

@@ -1,10 +1,8 @@
-"use client";
-
 import styled from "styled-components";
 
-export default function Pill({ label, onClick }: { label: string; onClick: (label: string) => void }) {
+export default function Pill({ label, onClick }: { label: string; onClick: (payload: string) => void }) {
 	return (
-		<StyledButton type="button" onClick={() => onClick(label)}>
+		<StyledButton type="button" aria-label={`Entferne ${label}`} onClick={() => onClick(label)}>
 			{label}
 		</StyledButton>
 	);

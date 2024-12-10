@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "styled-components";
 import Pill from "@/components/ui/Pill";
 
@@ -7,7 +5,7 @@ interface MultiSelectProps {
 	label: string;
 	selectedSymptoms: string[];
 	onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-	onClick: (symptom: string) => void;
+	onClick: (payload: string) => void;
 	children: React.ReactNode;
 }
 
@@ -40,8 +38,6 @@ const StyledLabel = styled.label`
 const StyledSelect = styled.select`
 	display: flex;
 	align-items: center;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 	color: var(--color-gray-60);
 	border-radius: var(--spacing-8);
 	font: var(--font-sans-regular-14);
@@ -54,5 +50,5 @@ const StyledRow = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--spacing-8);
-	padding-top: var(--spacing-8);
+	margin-top: var(--spacing-8);
 `;

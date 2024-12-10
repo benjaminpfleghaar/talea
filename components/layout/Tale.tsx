@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import styled from "styled-components";
 import { TaleProps } from "@/types/TaleProps";
@@ -10,10 +8,10 @@ function setCover(theme: string) {
 	return "fairy";
 }
 
-export default function Tale({ theme, title, story, isPending = false }: TaleProps) {
+export default function Tale({ theme, title, story, isPending = false }: TaleProps & { isPending?: boolean }) {
 	return (
 		<StyledArticle $isPending={isPending}>
-			<StyledImage src={`/images/${setCover(theme)}.jpg`} width={707} height={235} alt="Childish watercolor of a dragon and a child in the forest talking to each other" priority />
+			<StyledImage src={`/images/${setCover(theme)}.jpg`} width={691} height={219} alt={`Kindliches Aquarell mit dem Thema: ${theme}`} priority />
 			<StyledCaption>{theme}</StyledCaption>
 			<StyledHeadline>{title}</StyledHeadline>
 			<StyledWrapper>
@@ -33,9 +31,8 @@ const StyledArticle = styled.article<{ $isPending: boolean }>`
 	opacity: ${(props) => (props.$isPending ? "0.5" : "1.0")};
 `;
 const StyledImage = styled(Image)`
-	border-radius: var(--spacing-16);
-	margin-bottom: var(--spacing-48);
-	border: var(--spacing-8) solid var(--color-gray-0);
+	border-radius: var(--spacing-8);
+	margin: var(--spacing-8) var(--spacing-8) var(--spacing-48);
 `;
 const StyledCaption = styled.p`
 	width: 518px;
@@ -49,7 +46,6 @@ const StyledHeadline = styled.h2`
 	width: 518px;
 	text-align: center;
 	margin-inline: auto;
-	color: var(--color-gray-100);
 	font: var(--font-serif-bold-24);
 	margin-bottom: var(--spacing-48);
 `;
@@ -62,6 +58,5 @@ const StyledWrapper = styled.div`
 	margin-bottom: var(--spacing-96);
 `;
 const StyledParagraph = styled.p`
-	color: var(--color-gray-100);
 	font: var(--font-serif-regular-16);
 `;

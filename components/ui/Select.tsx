@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "styled-components";
 
 export default function Select({ label, children }: { label: string; children: React.ReactNode }) {

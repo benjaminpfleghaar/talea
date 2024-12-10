@@ -7,14 +7,15 @@ export default function SubmitButton({ label }: { label: string }) {
 
 	if (pending)
 		return (
-			<StyledButton type="submit" aria-label="Laden" disabled={true}>
+			<StyledButton type="submit" aria-label="Laden" disabled>
 				<StyledLoader></StyledLoader>
 			</StyledButton>
 		);
 
 	return (
 		<StyledButton type="submit">
-			<Image src="/images/ai.svg" width={18} height={21} alt="" /> {label}
+			<Image src="/images/ai.svg" width={18} height={21} alt="" />
+			{label}
 		</StyledButton>
 	);
 }
@@ -41,8 +42,6 @@ const StyledLoader = styled.span`
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	display: inline-block;
-	box-sizing: border-box;
 	border: 2px solid var(--color-gray-50);
 	animation: rotation 1s linear infinite;
 	border-bottom-color: var(--color-gray-0);

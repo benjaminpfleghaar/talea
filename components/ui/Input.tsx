@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "styled-components";
 
 export default function Input({ label, placeholder }: { label: string; placeholder: string }) {
