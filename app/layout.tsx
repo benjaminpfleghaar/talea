@@ -4,7 +4,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 
 export const metadata: Metadata = {
 	title: "Talea",
-	description: "Create personalized stories to explain ADHD symptoms to children.",
+	description: "Create personalized stories to explain ADHD symptoms to children",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
