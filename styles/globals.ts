@@ -50,6 +50,9 @@ const GlobalStyles = createGlobalStyle`
 		--spacing-64: 4rem;
 		--spacing-96: 6rem;
     }
+	html {
+		font-size: 100%;
+	}
 	body {
 		color: var(--color-gray-100);
 		background: var(--color-gray-10);
