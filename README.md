@@ -1,52 +1,46 @@
 # Talea
 
-This app project is the result of a five-day hackathon on the topic of "learning". The goal was to develop an idea and build a working prototype, with no restrictions on the choice of technology or platform.
-
-## Table of Contents
-
-1. [Description](#description)
-2. [Design](#design)
-3. [Backlog](#backlog)
-4. [How to use](#how-to-use)
-5. [Dependencies](#dependencies)
-6. [Tech Stack](#tech-stack)
-
-## Description
-
-ADHD is a complex neurological condition, making it difficult to explain — especially to children. Talea bridges the gap by using AI to generate personalized stories. Through these stories, patients can identify with the main character, gaining a deeper understanding of themselves, their symptoms, and ADHD as a whole.
-
-## Design
+A **Next.js** prototype developed during a five-day hackathon. Talea uses AI to generate personalized stories that help children with ADHD better understand themselves, their symptoms, and the condition as a whole.
 
 ![Mockup](./assets/mockup.jpg)
 
-## Backlog
+## Features
 
--   Provide more themes
--   Generate images dynamically
+- **AI-Powered Stories:** Personalized stories are generated using ChatGPT
+- **Customizable Settings:** Fine tune stories based on age, gender and symptoms
+- **Story Topics:** Choose from a variety of themes and scenarios
 
-## How to use
+## Technologies
 
-The application uses _Next.js_ as it's foundation.
+This project is built with:
 
--   Clone the whole repository
--   Run `npm install` in the app directory to install dependencies
--   Create a `.env.local` file and add your OpenAI API key
--   Run `npm run dev` to start the application
+- **Framework**: [Next.js](https://nextjs.org)
+- **Styling**: [Styled-Components](https://styled-components.com/)
+- **Generator**: [GPT-4o mini](https://openai.com/)
+- **Icons**: [Google](https://fonts.google.com/icons)
 
-## Dependencies
+## Getting Started
 
--   next
--   react-dom
--   styled-components
--   opaenai
--   react
+Ensure you have **Node.js** installed and an **OpenAI** API key.
 
-## Tech Stack
+### Installation
 
--   VSC
--   GitHub
--   Next.js
--   TypeScript
--   React
--   HTML
--   CSS
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/benjaminpfleghaar/talea.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local.` file and provide credentials:
+   ```plaintext
+   OPENAI_API_KEY=<YOUR_KEY>
+   ```
+
+4. Run the application:
+   ```bash
+   npm run dev
+   ```
