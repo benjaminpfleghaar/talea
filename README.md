@@ -7,8 +7,8 @@ A **Next.js** prototype developed during a five-day hackathon. Talea uses AI to 
 ## Features
 
 - **AI-Powered Stories:** Personalized stories are generated using ChatGPT
-- **Customizable Settings:** Fine tune stories based on age, gender and symptoms
-- **Story Topics:** Choose from a variety of themes and scenarios
+- **Customizable Settings:** Tailor stories based on age, gender, and symptoms
+- **Story Themes:** Choose from a variety of themes and scenarios
 
 ## Technologies
 
