@@ -1,46 +1,51 @@
 # Talea
 
-A **Next.js** prototype developed during a five-day hackathon. Talea uses AI to generate personalized stories that help children with ADHD better understand themselves, their symptoms, and the condition as a whole.
+Next.js prototype using AI to generate personalized stories that help children with ADHD understand themselves and their symptoms.
 
 ![Mockup](./assets/mockup.jpg)
 
 ## Features
 
-- **AI-Powered Stories:** Personalized stories are generated using ChatGPT
-- **Customizable Settings:** Tailor stories based on age, gender and symptoms
-- **Story Themes:** Choose from a variety of themes and scenarios
+-   **AI-Powered Stories:** Generate personalized stories using ChatGPT
+-   **Customizable Settings:** Tailor stories by age, gender, and symptoms
+-   **Story Themes:** Choose from a variety of themes and scenarios
 
 ## Technologies
 
-This project is built with:
-
-- **Framework**: [Next.js](https://nextjs.org)
-- **Styling**: [Styled-Components](https://styled-components.com/)
-- **Generator**: [GPT-4o mini](https://openai.com/)
-- **Icons**: [Google](https://fonts.google.com/icons)
+-   **Framework:** [Next.js](https://nextjs.org)
+-   **Styling:** [Styled Components](https://styled-components.com/)
+-   **AI:** [OpenAI/ChatGPT](https://openai.com/)
+-   **Icons:** [Google](https://fonts.google.com/icons)
 
 ## Getting Started
 
-Ensure you have **Node.js** installed and an **OpenAI** API key.
+### Prerequisites
+
+-   [Node.js](https://nodejs.org) installed
+-   An [OpenAI](https://openai.com/) API key
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/benjaminpfleghaar/talea.git
-   ```
+
+    ```bash
+    git clone https://github.com/benjaminpfleghaar/talea.git
+    ```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
 
-3. Create a `.env.local.` file and provide credentials:
-   ```plaintext
-   OPENAI_API_KEY=<YOUR_KEY>
-   ```
+    ```bash
+    npm install
+    ```
 
-4. Run the application:
-   ```bash
-   npm run dev
-   ```
+3. Create a `.env.local` file and add your credentials:
+
+    ```bash
+    OPENAI_API_KEY=<YOUR_KEY>
+    ```
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
