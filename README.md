@@ -7,7 +7,7 @@ Next.js prototype using AI to generate personalized stories that help children w
 ## Features
 
 -   **AI-Powered Stories:** Generate personalized stories using ChatGPT
--   **Customizable Settings:** Tailor stories by age, gender, and symptoms
+-   **Customizable Settings:** Tailor stories by age, gender and symptoms
 -   **Story Themes:** Choose from a variety of themes and scenarios
 
 ## Technologies
